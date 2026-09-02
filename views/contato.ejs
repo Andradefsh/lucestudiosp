@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Fale Conosco - Luce Studio . São Paulo</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header id="site-header">
+        <div class="logo">
+            <a href="/" style="text-decoration: none; color: inherit; display: block;">
+                <h1>LUCE STUDIO</h1>
+                <span>Lighting Design & Solutions</span>
+            </a>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/empresa">Empresa</a></li>
+                <li><a href="/portifolio">Portifólio</a></li>
+                <li><a href="/produtos">Produtos</a></li>
+                <li><a href="/midia">Na Mídia</a></li>
+                <li><a href="/faleconosco" class="active">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-page">
+        <div class="container">
+            <h2>FALE CONOSCO</h2>
+            <div class="contact-info">
+                <p><strong>T.</strong> <%= infoEmpresa.telefone %></p>
+                <p><strong>C.</strong> <%= infoEmpresa.celular %></p>
+                <p><%= infoEmpresa.endereco %></p>
+            </div>
+            <form id="contact-form">
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu E-mail" required>
+                <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Enviar</button>
+                <p id="form-msg" style="display:none; color: #2e7d32; margin-top: 10px;">Mensagem enviada com sucesso!</p>
+            </form>
+        </div>
+    </main>
+
+    <script src="/script/script.js"></script>
+</body>
+</html>

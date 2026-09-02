@@ -1,98 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= dadosEmpresa.titulo %></title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <title><%= infoEmpresa.titulo %></title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <header id="site-header">
-        <div class="logo">
-            <h1>LUCE STUDIO</h1>
-            <span>Lighting Design & Solutions</span>
+
+<%- include('partials/header') %>
+
+<main class="home-main">
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h2>LIGHTING PROJECTS</h2>
+        <div class="hero-gallery">
+          <img src="/images/produto-luminaria-vinho.jpg" alt="Luminária Luce com taça de vinho" />
+          <img src="/images/produto-luminaria-ambiente.jpg" alt="Luminária Luce em ambiente" />
         </div>
-        <nav class="desktop-nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#empresa">Empresa</a></li>
-                <li><a href="#portifolio">Portifólio</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#contato">Fale Conosco</a></li>
-            </ul>
-        </nav>
-    </header>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <main>
-        <section id="home" class="hero-section">
-            <div class="hero-content">
-                <h2>ARQUITETURA DE LUZ</h2>
-                <p>Soluções exclusivas em iluminação e automação para projetos residenciais, corporativos e comerciais.</p>
-                <a href="#contato" class="btn-primary">Entre em Contato</a>
-            </div>
-        </section>
+<%- include('partials/footer') %>
 
-        <section id="empresa" class="about-section">
-            <div class="container">
-                <h2>Empresa & Fundadora</h2>
-                <div class="about-text">
-                    <p><strong><%= dadosEmpresa.fundadora %></strong> obteve sua graduação em Arquitetura e Urbanismo pela FAAP-SP em 1998. Sua carreira foi iniciada na indústria de iluminação em 1997 no Departamento de Projetos de Iluminação da Philips do Brasil Ltda., empresa onde trabalhou mais de 7 anos.</p>
-                    <p>Contribuiu por 7 anos como Country Manager para a empresa Lutron BZ do Brasil Ltda., filial da multinacional americana Lutron Electronics Inc. Co., líder mundial em controles de iluminação e automação no país, de 2001 a 2008.</p>
-                    <p>Em 2008, com amadurecimento profissional, fundou a <strong>Luce Studio</strong>, atuando em diversos projetos de grande importância no varejo, institucionais, residências e corporativos, ultrapassando 100 mil m² executados.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="portifolio" class="portfolio-section">
-            <div class="container">
-                <h2>PORTIFÓLIO & PROJETOS EXECUTADOS</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Residencial Luxo">
-                        <h3>Projetos Residenciais</h3>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Corporativo">
-                        <h3>Corporativo & Varejo</h3>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Automação">
-                        <h3>Iluminação & Automação</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="produtos" class="products-section">
-            <div class="container">
-                <h2>PRODUTOS EXCLUSIVOS</h2>
-                <p style="text-align: center; color: #666;">Seleção de sistemas de controlo avançados e luminárias de alto desempenho técnico e estético.</p>
-            </div>
-        </section>
-
-        <section id="contato" class="contact-section">
-            <div class="container">
-                <h2>FALE CONOSCO</h2>
-                <div class="contact-info">
-                    <p><strong>T.</strong> <%= dadosEmpresa.telefone %></p>
-                    <p><strong>C.</strong> <%= dadosEmpresa.celular %></p>
-                    <p><%= dadosEmpresa.endereco %></p>
-                </div>
-                <form id="contact-form">
-                    <input type="text" placeholder="Seu Nome" required>
-                    <input type="email" placeholder="Seu E-mail" required>
-                    <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
-                    <button type="submit" class="btn-primary">Enviar</button>
-                    <p id="form-msg" style="display:none; color: #2e7d32; margin-top: 10px;">Mensagem enviada com sucesso!</p>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Luce Studio - Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="/script.js"></script>
+<script src="/script/script.js"></script>
 </body>
 </html>

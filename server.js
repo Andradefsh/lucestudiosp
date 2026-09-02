@@ -1,25 +1,43 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// Configurar o EJS como موتور de template
 app.set('view engine', 'ejs');
-
-// Servir arquivos estáticos (CSS, imagens, JS do cliente)
 app.use(express.static('public'));
 
-// Rota principal
+// Dados oficiais extraídos do site da Luce Studio
+const infoEmpresa = {
+    titulo: "Lighting Designer | Luce Studio | São Paulo",
+    fundadora: "Juliana Ramacciotti",
+    telefone: "+55 (11) 3294 8177",
+    celular: "+55 (11) 9 7190 0732",
+    endereco: "Av. Brigadeiro Faria Lima, 1597 - Cj. 509C - CEP 01452-000 - São Paulo, SP - Brasil"
+};
+
 app.get('/', (req, res) => {
-    const dadosEmpresa = {
-        titulo: "Lighting Designer | Luce Studio | São Paulo",
-        fundadora: "Juliana Ramacciotti",
-        telefone: "+55 (11) 3294 8177",
-        celular: "+55 (11) 9 7190 0732",
-        endereco: "Av. Brigadeiro Faria Lima, 1597 - Cj. 509C - CEP 01452-000 - São Paulo, SP - Brasil"
-    };
-    res.render('index', { dadosEmpresa });
+    res.render('index', { paginaAtiva: 'home', infoEmpresa });
+});
+
+app.get('/empresa', (req, res) => {
+    res.render('empresa', { paginaAtiva: 'empresa', infoEmpresa });
+});
+
+app.get('/portifolio', (req, res) => {
+    res.render('portifolio', { paginaAtiva: 'portifolio', infoEmpresa });
+});
+
+app.get('/produtos', (req, res) => {
+    res.render('produtos', { paginaAtiva: 'produtos', infoEmpresa });
+});
+
+app.get('/midia', (req, res) => {
+    res.render('midia', { paginaAtiva: 'midia', infoEmpresa });
+});
+
+app.get('/faleconosco', (req, res) => {
+    res.render('contato', { paginaAtiva: 'contato', infoEmpresa });
 });
 
 app.listen(PORT, () => {
-    console.log(`Servidor a correr em http://localhost:${PORT}`);
+    console.log(`Servidor rodando na porta ${PORT}`);
 });
