@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos | Luce Studio</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<%- include('../partials/header.ejs') %>
+
+<main class="content-page">
+  <div class="container">
+    <header class="page-head">
+      <span class="eyebrow">Lighting Projects</span>
+      <h1>Produtos Exclusivos</h1>
+      <p>Curadoria de luminárias e soluções de controle que complementam os projetos de iluminação da Luce Studio.</p>
+    </header>
+    <div class="products-gallery">
+      <figure class="product-card"><img src="/images/produto-luminaria-ambiente.jpg" alt="Luminária Luce em ambiente"><figcaption>Luminária · Ambiente</figcaption></figure>
+      <figure class="product-card"><img src="/images/produto-luminaria-vinho.jpg" alt="Luminária Luce"><figcaption>Luminária · Coleção</figcaption></figure>
+      <figure class="product-card"><img src="/images/produto-luminaria.jpg" alt="Luminária Luce"><figcaption>Luminária · Design</figcaption></figure>
+    </div>
+  </div>
+</main>
+<%- include('../partials/floating-menu') %><%- include('../partials/footer') %>
+<script src="/js/translation.js"></script>
+</body></html>

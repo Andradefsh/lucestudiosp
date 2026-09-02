@@ -1,0 +1,51 @@
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="Luce Studio">
+      <img src="/images/logo.webp" alt="Luce Studio">
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a class="<%= (typeof paginaAtiva !== 'undefined' && paginaAtiva === 'empresa') ? 'active' : '' %>" href="/empresa" data-i18n-nav="company">Empresa</a>
+      <a class="<%= (typeof paginaAtiva !== 'undefined' && paginaAtiva === 'portifolio') ? 'active' : '' %>" href="/portifolio" data-i18n-nav="portfolio">Portifólio</a>
+      <a class="<%= (typeof paginaAtiva !== 'undefined' && paginaAtiva === 'produtos') ? 'active' : '' %>" href="/produtos" data-i18n-nav="products">Produtos</a>
+      <a class="<%= (typeof paginaAtiva !== 'undefined' && paginaAtiva === 'midia') ? 'active' : '' %>" href="/midia" data-i18n-nav="media">Na mídia</a>
+      <a class="<%= (typeof paginaAtiva !== 'undefined' && paginaAtiva === 'contato') ? 'active' : '' %>" href="/faleconosco" data-i18n-nav="contact">Fale Conosco</a>
+    </nav>
+
+    <div class="header-right">
+      <div class="header-social" aria-label="Redes sociais">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src="/images/icon-facebook.png" alt="">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="/images/icon-instagram.png" alt="">
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="/images/icon-linkedin.png" alt="">
+        </a>
+      </div>
+
+      <label class="language-control" aria-label="Idioma">
+        <img src="/images/BRA.png" alt="Brasil" data-flag-image>
+        <select data-lang-select aria-label="Selecionar idioma">
+          <option value="pt" selected>PT</option>
+          <option value="en">EN</option>
+        </select>
+        <span class="language-label" data-lang-label>PT</span>
+        <span class="language-arrow" aria-hidden="true">⌄</span>
+      </label>
+    </div>
+
+    <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile" aria-hidden="true">
+    <a href="/empresa" data-mobile-i18n="company">Empresa</a>
+    <a href="/portifolio" data-mobile-i18n="portfolio">Portifólio</a>
+    <a href="/produtos" data-mobile-i18n="products">Produtos</a>
+    <a href="/midia" data-mobile-i18n="media">Na mídia</a>
+    <a href="/faleconosco" data-mobile-i18n="contact">Fale Conosco</a>
+  </nav>
+</header>
