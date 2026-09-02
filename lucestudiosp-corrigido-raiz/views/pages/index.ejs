@@ -2,7 +2,18 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Projeto de iluminação e lighting design em São Paulo. Conheça a Luce Studio, seus projetos e soluções de iluminação." />
+    <meta name="theme-color" content="#666666" />
+    <meta property="og:title" content="<%= infoEmpresa.titulo %>" />
+    <meta property="og:description" content="Projeto de iluminação e lighting design em São Paulo. Conheça a Luce Studio, seus projetos e soluções de iluminação." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= canonicalUrl %>" />
+    <meta property="og:image" content="https://lucestudiosp.com/images/logo.webp" />
+    <meta property="og:site_name" content="Luce Studio" />
+    <link rel="icon" type="image/png" href="/images/logo.webp" />
+    <link rel="canonical" href="<%= canonicalUrl %>" />
+    <link rel="preload" as="image" href="/images/produto-luminaria-ambiente.webp" fetchpriority="high" />
     <title><%= infoEmpresa.titulo %></title>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
@@ -13,8 +24,12 @@
       <section class="hero">
         <img
           class="hero-image"
-          src="/images/produto-luminaria-ambiente.jpg"
+          src="/images/produto-luminaria-ambiente.webp"
           alt="Projeto de iluminação Luce Studio"
+          width="1351"
+          height="679"
+          fetchpriority="high"
+          decoding="async"
         />
         <div class="hero-content">
           <div class="hero-kicker">Luce Studio</div>
@@ -32,18 +47,22 @@
           </div>
           <div class="home-links">
             <a class="home-link" href="/portifolio">
-              <img src="/images/produto-luminaria-vinho.jpg" alt="Portfólio" />
+              <img src="/images/produto-luminaria-vinho.webp" alt="Portfólio" width="1351" height="679" loading="lazy" decoding="async" />
               <span>Portfólio</span>
             </a>
             <a class="home-link" href="/produtos">
               <img
-                src="/images/produto-luminaria.jpg"
+                src="/images/produto-luminaria.webp"
                 alt="Produtos exclusivos"
+                width="1351"
+                height="679"
+                loading="lazy"
+                decoding="async"
               />
               <span>Exclusive Products</span>
             </a>
             <a class="home-link" href="/empresa">
-              <img src="/images/perfil-equipe.jpg" alt="Luce Studio" />
+              <img src="/images/perfil-equipe.webp" alt="Luce Studio" width="1259" height="1080" loading="lazy" decoding="async" />
               <span>Luce Studio</span>
             </a>
           </div>
@@ -53,7 +72,7 @@
       <section class="section">
         <div class="container intro">
           <div class="intro-image">
-            <img src="/images/perfil-equipe.jpg" alt="Luce Studio" />
+            <img src="/images/perfil-equipe.webp" alt="Luce Studio" width="1259" height="1080" loading="lazy" decoding="async" />
           </div>
           <article>
             <span class="eyebrow">Juliana Ramacciotti</span>
@@ -74,6 +93,5 @@
     </main>
     <%- include('../partials/floating-menu') %> <%-
     include('../partials/footer') %>
-    <script src="/js/script.js" defer></script>
   </body>
 </html>

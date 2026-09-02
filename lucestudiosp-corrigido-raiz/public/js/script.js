@@ -16,11 +16,16 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
           const response = await fetch(form.action || "/contato", {
             method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+              Accept: "application/json",
+            },
             body: new URLSearchParams(new FormData(form)),
           });
           const result = await response.json();
-          if (!response.ok) throw new Error(result.error);
+          if (!response.ok) {
+            throw new Error(result.error || "Não foi possível enviar a mensagem.");
+          }
           if (msg) {
             msg.textContent = result.message || "Mensagem enviada com sucesso!";
             msg.classList.add("is-success");
@@ -43,11 +48,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const button = document.getElementById("mobileMenuButton");
   const menu = document.getElementById("mobileNav");
   if (button && menu) {
+    menu.inert = true;
+
     button.addEventListener("click", () => {
       const open = button.getAttribute("aria-expanded") === "true";
       button.setAttribute("aria-expanded", String(!open));
       button.setAttribute("aria-label", open ? "Abrir menu" : "Fechar menu");
       menu.setAttribute("aria-hidden", String(open));
+      menu.inert = open;
       menu.classList.toggle("is-open", !open);
       document.body.classList.toggle("menu-open", !open);
     });
@@ -57,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.setAttribute("aria-expanded", "false");
         button.setAttribute("aria-label", "Abrir menu");
         menu.setAttribute("aria-hidden", "true");
+        menu.inert = true;
         menu.classList.remove("is-open");
         document.body.classList.remove("menu-open");
       }),

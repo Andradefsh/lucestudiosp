@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-
 :root {
-  --font-primary: "Inter", sans-serif;
+  --font-primary: "Inter", "Helvetica Neue", Arial, sans-serif;
 
   --primary-color: #f8f6f1;
   --secondary-color: #666666;
@@ -12,11 +10,44 @@
   --text-color-primary: #ffffff;
   --text-color-secondary: #333333;
 
-  --border-color: rgba(17, 24, 39, 0.08);
+  --border-color: #e5e5e5;
 
   --focus-color: #ffffff;
   --accent-color: #8c7355;
   --bg-color: #ffffff;
   --text-color: #333333;
-  --border-color: #e5e5e5;
+}
+
+html {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+img {
+  max-width: 100%;
+}
+
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

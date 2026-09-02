@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     pt: {
       nav: {
         company: "Empresa",
-        portfolio: "Portifólio",
+        portfolio: "Portfólio",
         media: "Na mídia",
         products: "Produtos",
         contact: "Fale Conosco",
@@ -80,8 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (flagImage) {
       const isPortuguese = language === "pt";
       flagImage.src = isPortuguese
-        ? "https://flagcdn.com/w20/br.png"
-        : "https://flagcdn.com/w20/gb.png";
+        ? "/images/flag-brasil.webp"
+        : "/images/GBR.webp";
       flagImage.alt = isPortuguese ? "Brasil" : "United Kingdom";
     }
 

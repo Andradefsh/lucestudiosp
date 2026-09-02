@@ -2,7 +2,16 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Entre em contato com a Luce Studio para conversar sobre projetos de iluminação e lighting design." />
+    <meta name="theme-color" content="#666666" />
+    <meta property="og:title" content="Fale Conosco | Luce Studio" />
+    <meta property="og:description" content="Entre em contato com a Luce Studio para conversar sobre projetos de iluminação e lighting design." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= canonicalUrl %>" />
+    <meta property="og:image" content="https://lucestudiosp.com/images/logo.webp" />
+    <meta property="og:site_name" content="Luce Studio" />
+    <link rel="canonical" href="<%= canonicalUrl %>" />
     <title>Fale Conosco | Luce Studio</title>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
@@ -32,12 +41,18 @@
             action="/contato"
             method="post"
           >
-            <input type="text" name="nome" placeholder="Nome *" required />
-            <input type="email" name="email" placeholder="Email *" required />
-            <input type="text" name="assunto" placeholder="Assunto" />
+            <label class="visually-hidden" for="contact-name">Nome *</label>
+            <input id="contact-name" type="text" name="nome" placeholder="Nome *" autocomplete="name" required />
+            <label class="visually-hidden" for="contact-email">Email *</label>
+            <input id="contact-email" type="email" name="email" placeholder="Email *" autocomplete="email" required />
+            <label class="visually-hidden" for="contact-subject">Assunto</label>
+            <input id="contact-subject" type="text" name="assunto" placeholder="Assunto" />
+            <label class="visually-hidden" for="contact-message">Mensagem</label>
             <textarea
+              id="contact-message"
               name="mensagem"
               placeholder="Mensagem"
+              rows="6"
               required
             ></textarea>
             <button class="btn-primary" type="submit">Enviar</button>
@@ -48,6 +63,5 @@
     </main>
     <%- include('../partials/floating-menu') %><%- include('../partials/footer')
     %>
-    <script src="/js/script.js"></script>
   </body>
 </html>

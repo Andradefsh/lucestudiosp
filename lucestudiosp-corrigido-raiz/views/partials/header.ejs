@@ -8,7 +8,7 @@
         <img
           src="/images/logo.webp"
           width="130"
-          height="65"
+          height="77"
           alt="Luce Studio - página inicial"
           decoding="async"
           />
@@ -17,7 +17,7 @@
     <nav class="desktop-nav" data-nav-aria aria-label="Navegação principal">
       <ul>
         <li><a href="/empresa" data-i18n-nav="company" <%= paginaAtiva === "empresa" ? 'aria-current="page"' : "" %>>Empresa</a></li>
-        <li><a href="/portifolio" data-i18n-nav="portfolio" <%= paginaAtiva === "portifolio" ? 'aria-current="page"' : "" %>>Portifólio</a></li>
+        <li><a href="/portifolio" data-i18n-nav="portfolio" <%= paginaAtiva === "portifolio" ? 'aria-current="page"' : "" %>>Portfólio</a></li>
         <li><a href="/midia" data-i18n-nav="media" <%= paginaAtiva === "midia" ? 'aria-current="page"' : "" %>>Na mídia</a></li>
         <li><a href="/produtos" data-i18n-nav="products" <%= paginaAtiva === "produtos" ? 'aria-current="page"' : "" %>>Produtos</a></li>
         <li><a href="#contato" data-i18n-nav="contact" <%= paginaAtiva === "contato" ? 'aria-current="page"' : "" %>>Fale Conosco</a></li>
@@ -25,15 +25,15 @@
     </nav>
 
     <div class="header-actions">
-      <div class="social-links" aria-label="Redes sociais">
+      <nav class="social-links" aria-label="Redes sociais">
         <a
           href="https://www.facebook.com/lucestudiosp/?locale=pt_BR"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="Facebook"
         >
           <img
-            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg"
+            src="/images/facebook-2.webp"
             alt=""
             width="14"
             height="14"
@@ -43,11 +43,11 @@
         <a
           href="https://www.instagram.com/lucestudiosp/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="Instagram"
         >
           <img
-            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg"
+            src="/images/instagram-2.webp"
             alt=""
             width="14"
             height="14"
@@ -57,24 +57,24 @@
         <a
           href="https://br.linkedin.com/in/julianaramacciotti"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
           <img
-            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg"
+            src="/images/linkedin-2.webp"
             alt=""
             width="14"
             height="14"
             decoding="async"
           />
         </a>
-      </div>
+      </nav>
 
       <div class="lang-select-wrap">
         <span class="lang-trigger" aria-hidden="true">
           <img
             class="flag"
-            src="https://flagcdn.com/w20/br.webp"
+            src="/images/flag-brasil.webp"
             alt="Brasil"
             data-flag-image
           />
