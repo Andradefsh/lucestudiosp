@@ -1,52 +1,104 @@
-<header class="site-header" id="site-header">
-  <div class="header-inner">
-    <a class="brand" href="/" aria-label="Luce Studio">
-      <img src="/images/logo.webp" alt="Luce Studio">
-    </a>
+<script src="/js/translation.js" defer></script>
+<link href="/css/header.css" rel="stylesheet" />
+<link href="/css/global.css" rel="stylesheet" />
 
-    <nav class="main-nav" aria-label="Navegação principal">
-      <a class="<%= (typeof paginaAtiva !== 'undefined' && paginaAtiva === 'empresa') ? 'active' : '' %>" href="/empresa" data-i18n-nav="company">Empresa</a>
-      <a class="<%= (typeof paginaAtiva !== 'undefined' && paginaAtiva === 'portifolio') ? 'active' : '' %>" href="/portifolio" data-i18n-nav="portfolio">Portifólio</a>
-      <a class="<%= (typeof paginaAtiva !== 'undefined' && paginaAtiva === 'produtos') ? 'active' : '' %>" href="/produtos" data-i18n-nav="products">Produtos</a>
-      <a class="<%= (typeof paginaAtiva !== 'undefined' && paginaAtiva === 'midia') ? 'active' : '' %>" href="/midia" data-i18n-nav="media">Na mídia</a>
-      <a class="<%= (typeof paginaAtiva !== 'undefined' && paginaAtiva === 'contato') ? 'active' : '' %>" href="/faleconosco" data-i18n-nav="contact">Fale Conosco</a>
+<header id="header">
+  <div class="header-inner">
+      <a href="/" class="logo">
+        <img
+          src="/images/logo.webp"
+          width="130"
+          height="65"
+          alt="Luce Studio - página inicial"
+          decoding="async"
+          />
+      </a>
+
+    <nav class="desktop-nav" data-nav-aria aria-label="Navegação principal">
+      <ul>
+        <li><a href="/empresa" data-i18n-nav="company" <%= paginaAtiva === "empresa" ? 'aria-current="page"' : "" %>>Empresa</a></li>
+        <li><a href="/portifolio" data-i18n-nav="portfolio" <%= paginaAtiva === "portifolio" ? 'aria-current="page"' : "" %>>Portifólio</a></li>
+        <li><a href="/midia" data-i18n-nav="media" <%= paginaAtiva === "midia" ? 'aria-current="page"' : "" %>>Na mídia</a></li>
+        <li><a href="/produtos" data-i18n-nav="products" <%= paginaAtiva === "produtos" ? 'aria-current="page"' : "" %>>Produtos</a></li>
+        <li><a href="#contato" data-i18n-nav="contact" <%= paginaAtiva === "contato" ? 'aria-current="page"' : "" %>>Fale Conosco</a></li>
+      </ul>
     </nav>
 
-    <div class="header-right">
-      <div class="header-social" aria-label="Redes sociais">
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <img src="/images/icon-facebook.png" alt="">
+    <div class="header-actions">
+      <div class="social-links" aria-label="Redes sociais">
+        <a
+          href="https://www.facebook.com/lucestudiosp/?locale=pt_BR"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Facebook"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg"
+            alt=""
+            width="14"
+            height="14"
+            decoding="async"
+          />
         </a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <img src="/images/icon-instagram.png" alt="">
+        <a
+          href="https://www.instagram.com/lucestudiosp/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Instagram"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg"
+            alt=""
+            width="14"
+            height="14"
+            decoding="async"
+          />
         </a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <img src="/images/icon-linkedin.png" alt="">
+        <a
+          href="https://br.linkedin.com/in/julianaramacciotti"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="LinkedIn"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg"
+            alt=""
+            width="14"
+            height="14"
+            decoding="async"
+          />
         </a>
       </div>
 
-      <label class="language-control" aria-label="Idioma">
-        <img src="/images/brazil.webp" alt="Brasil">
-        <img src="/images/GBR.png" alt="Reino Unido">
-        <select data-lang-select aria-label="Selecionar idioma">
-          <option value="pt" selected>PT</option>
-          <option value="en">EN</option>
+      <div class="lang-select-wrap">
+        <span class="lang-trigger" aria-hidden="true">
+          <img
+            class="flag"
+            src="https://flagcdn.com/w20/br.webp"
+            alt="Brasil"
+            data-flag-image
+          />
+          <span class="lang-label" data-lang-label>PT</span>
+          <svg class="lang-caret" viewBox="0 0 20 20" aria-hidden="true">
+            <path
+              d="M5 7.5L10 12.5L15 7.5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+        <select
+          aria-label="Selecionar idioma"
+          class="lang-select"
+          data-lang-select
+        >
+          <option value="pt" selected>Português (BR)</option>
+          <option value="en">English (US)</option>
         </select>
-        <span class="language-label" data-lang-label>PT</span>
-        <span class="language-arrow" aria-hidden="true">⌄</span>
-      </label>
+      </div>
     </div>
-
-    <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Abrir menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
   </div>
-
-  <nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile" aria-hidden="true">
-    <a href="/empresa" data-mobile-i18n="company">Empresa</a>
-    <a href="/portifolio" data-mobile-i18n="portfolio">Portifólio</a>
-    <a href="/produtos" data-mobile-i18n="products">Produtos</a>
-    <a href="/midia" data-mobile-i18n="media">Na mídia</a>
-    <a href="/faleconosco" data-mobile-i18n="contact">Fale Conosco</a>
-  </nav>
 </header>

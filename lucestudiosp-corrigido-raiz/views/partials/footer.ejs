@@ -1,39 +1,158 @@
-<footer class="site-footer">
-  <section class="footer-contact" aria-labelledby="footer-contact-title">
-    <div class="footer-contact-inner">
-      <div class="footer-form-column">
-        <p class="footer-eyebrow">Luce Studio</p>
-        <h2 id="footer-contact-title">Fale Conosco</h2>
-        <form class="footer-contact-form contact-form-common" action="/faleconosco" method="post">
-          <input type="email" name="email" placeholder="Email *" aria-label="Email" required>
-          <input type="text" name="nome" placeholder="Nome *" aria-label="Nome" required>
-          <input type="text" name="assunto" placeholder="Assunto" aria-label="Assunto">
-          <textarea name="mensagem" placeholder="Mensagem" aria-label="Mensagem" required></textarea>
-          <button type="submit">Enviar</button>
-          <p class="footer-form-message" hidden>Mensagem enviada!</p>
+<link href="/css/footer.css" rel="stylesheet" />
+
+<footer>
+  <div class="footer-contact-area" id="contato">
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <div class="footer-form-heading">
+          <span aria-hidden="true"></span>
+          <h2 data-i18n-footer="contactTitle">Fale conosco</h2>
+        </div>
+        <form
+          class="footer-form"
+          id="footer-contact-form"
+          action="/contato"
+          method="post"
+        >
+          <label for="footer-email" data-i18n-footer="email">E-mail *</label>
+          <input
+            id="footer-email"
+            name="email"
+            type="email"
+            placeholder="E-mail *"
+            data-i18n-placeholder="email"
+            autocomplete="email"
+            required
+          />
+          <label for="footer-name" data-i18n-footer="name">Nome *</label>
+          <input
+            id="footer-name"
+            name="name"
+            type="text"
+            placeholder="Nome *"
+            data-i18n-placeholder="name"
+            autocomplete="name"
+            required
+          />
+          <label for="footer-subject" data-i18n-footer="subject">Assunto</label>
+          <input
+            id="footer-subject"
+            name="subject"
+            type="text"
+            placeholder="Assunto"
+            data-i18n-placeholder="subject"
+          />
+          <label for="footer-message" data-i18n-footer="message"
+            >Mensagem</label
+          >
+          <textarea
+            id="footer-message"
+            name="message"
+            placeholder="Mensagem"
+            data-i18n-placeholder="message"
+            rows="5"
+            required
+          ></textarea>
+          <div class="footer-form-actions">
+            <button class="footer-submit" type="submit">Enviar</button>
+            <p
+              class="footer-form-message"
+              role="status"
+              aria-live="polite"
+              hidden
+            >
+              <span data-i18n-footer="success"
+                >Mensagem enviada com sucesso!</span
+              >
+            </p>
+          </div>
         </form>
       </div>
 
-      <div class="footer-info-column">
-        <div class="footer-social" aria-label="Redes sociais">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="/images/icon-facebook.png" alt=""></a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="/images/icon-instagram.png" alt=""></a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="/images/icon-linkedin.png" alt=""></a>
-        </div>
-        <address>
-          <strong>Av. Brigadeiro Faria Lima, 1597 - Cj. 509C</strong>
-          <span>São Paulo, SP - Brasil</span>
-          <span>CEP 01452-000</span>
-          <span>T. +55 (11) 3294 8177</span>
-          <span>C. +55 (11) 9 7190 0732</span>
+      <div class="footer-location">
+        <address class="footer-address">
+          <strong>Luce Studio</strong>
+          <strong data-i18n-footer="contactTitle">Fale conosco</strong>
+          <span><%= infoEmpresa.endereco %></span>
+          <a href="tel:+551132948177">T. <%= infoEmpresa.telefone %></a>
+          <a href="tel:+5511971900732">C. <%= infoEmpresa.celular %></a>
         </address>
+        <iframe
+          class="footer-map"
+          src="https://www.google.com/maps?q=Av.+Brigadeiro+Faria+Lima,+1597,+S%C3%A3o+Paulo,+SP&output=embed"
+          title="Localização da Luce Studio em São Paulo"
+          data-i18n-map-title
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
-  </section>
+  </div>
 
   <div class="footer-bottom">
-    <img src="/images/logo-luce-studio-cinza.png" alt="Luce Studio" class="footer-brand">
-    <p>SÃO PAULO 2020</p>
-    <span>LIGHTING DESIGN</span>
+    <div class="footer-bottom-inner">
+      <a
+        class="footer-brand"
+        href="/"
+        aria-label="Luce Studio - página inicial"
+      >
+        <img
+          src="/images/logo-2.webp"
+          alt=""
+          class="footer-logo"
+          width="133"
+          height="79"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+      <nav class="social-links" aria-label="Redes sociais" data-i18n-social>
+        <a
+          href="https://www.facebook.com/lucestudiosp/?locale=pt_BR"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+          ><img
+            src="/images/facebook-2.webp"
+            alt=""
+            width="16"
+            height="16"
+            loading="lazy"
+            decoding="async"
+        /></a>
+        <a
+          href="https://www.instagram.com/lucestudiosp/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          ><img
+            src="/images/instagram-2.webp"
+            alt=""
+            width="16"
+            height="16"
+            loading="lazy"
+            decoding="async"
+        /></a>
+        <a
+          href="https://br.linkedin.com/in/julianaramacciotti"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          ><img
+            src="/images/icon-linkedin.png"
+            alt=""
+            width="16"
+            height="16"
+            loading="lazy"
+            decoding="async"
+        /></a>
+      </nav>
+      <small class="footer-copy"
+        >&copy; 2026 Luce Studio.
+        <span data-i18n-footer="rights"
+          >Todos os direitos reservados.</span
+        ></small
+      >
+    </div>
   </div>
 </footer>

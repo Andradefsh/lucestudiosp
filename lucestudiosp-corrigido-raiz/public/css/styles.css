@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 :root{
   --black:#202020;
@@ -14,7 +14,7 @@ html{scroll-behavior:smooth}
 body{
   color:var(--text);
   background:#fff;
-  font-family:"Open Sans","Helvetica Neue",Arial,sans-serif;
+  font-family: var(--font-primary);
   font-size:14px;
   font-weight:300;
   line-height:1.7;
@@ -35,7 +35,7 @@ main{padding-top:86px;min-height:calc(100vh - 180px)}
   display:flex;align-items:center;gap:30px;
 }
 .logo{flex:0 0 155px}
-.logo img{width:155px;height:auto;object-fit:contain}
+.logo img{width:130px;height:auto;object-fit:contain}
 .desktop-nav{flex:1;display:flex;justify-content:center}
 .desktop-nav ul{display:flex;align-items:center;gap:34px;list-style:none}
 .desktop-nav a{

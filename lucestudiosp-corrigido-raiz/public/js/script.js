@@ -1,15 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".contact-form-common, #contact-form").forEach((form) => {
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const msg = form.querySelector(".footer-form-message") || document.getElementById("form-msg");
-      if (msg) {
-        msg.hidden = false;
-        window.setTimeout(() => { msg.hidden = true; }, 4000);
-      }
-      form.reset();
+  document
+    .querySelectorAll(
+      ".contact-form-common, #contact-form, #footer-contact-form",
+    )
+    .forEach((form) => {
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const msg =
+          form.querySelector(".footer-form-message") ||
+          document.getElementById("form-msg");
+        const button = form.querySelector("[type='submit']");
+        if (button) button.disabled = true;
+        if (msg) msg.classList.remove("is-success", "is-error");
+
+        try {
+          const response = await fetch(form.action || "/contato", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(new FormData(form)),
+          });
+          const result = await response.json();
+          if (!response.ok) throw new Error(result.error);
+          if (msg) {
+            msg.textContent = result.message || "Mensagem enviada com sucesso!";
+            msg.classList.add("is-success");
+            msg.hidden = false;
+          }
+          form.reset();
+        } catch (error) {
+          if (msg) {
+            msg.textContent =
+              error.message || "Não foi possível enviar a mensagem.";
+            msg.classList.add("is-error");
+            msg.hidden = false;
+          }
+        } finally {
+          if (button) button.disabled = false;
+        }
+      });
     });
-  });
 
   const button = document.getElementById("mobileMenuButton");
   const menu = document.getElementById("mobileNav");
@@ -23,12 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.toggle("menu-open", !open);
     });
 
-    menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
-      button.setAttribute("aria-expanded", "false");
-      button.setAttribute("aria-label", "Abrir menu");
-      menu.setAttribute("aria-hidden", "true");
-      menu.classList.remove("is-open");
-      document.body.classList.remove("menu-open");
-    }));
+    menu.querySelectorAll("a").forEach((link) =>
+      link.addEventListener("click", () => {
+        button.setAttribute("aria-expanded", "false");
+        button.setAttribute("aria-label", "Abrir menu");
+        menu.setAttribute("aria-hidden", "true");
+        menu.classList.remove("is-open");
+        document.body.classList.remove("menu-open");
+      }),
+    );
   }
 });

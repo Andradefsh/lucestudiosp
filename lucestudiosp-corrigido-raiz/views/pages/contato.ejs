@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fale Conosco | Luce Studio</title>
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-<%- include('../partials/header.ejs') %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fale Conosco | Luce Studio</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <%- include('../partials/header.ejs') %>
 
-<main class="content-page">
-  <div class="container">
-    <header class="page-head">
-      <span class="eyebrow">Luce Studio</span>
-      <h1>Fale Conosco</h1>
-    </header>
-    <div class="contact-layout">
-      <section class="contact-details">
-        <h2>Contato</h2>
-        <p><span class="label">Endereço</span><%= infoEmpresa.endereco %></p>
-        <p><span class="label">Telefone</span><%= infoEmpresa.telefone %></p>
-        <p><span class="label">Celular</span><%= infoEmpresa.celular %></p>
-      </section>
-      <form class="contact-form" id="contact-form">
-        <input type="text" name="nome" placeholder="Nome *" required>
-        <input type="email" name="email" placeholder="Email *" required>
-        <input type="text" name="assunto" placeholder="Assunto">
-        <textarea name="mensagem" placeholder="Mensagem" required></textarea>
-        <button class="btn-primary" type="submit">Enviar</button>
-        <p class="form-msg" id="form-msg" hidden>Mensagem enviada!</p>
-      </form>
-    </div>
-  </div>
-</main>
-<%- include('../partials/floating-menu') %><%- include('../partials/footer') %>
-<script src="/js/script.js"></script><script src="/js/translation.js"></script>
-</body></html>
+    <main class="content-page">
+      <div class="container">
+        <header class="page-head">
+          <span class="eyebrow">Luce Studio</span>
+          <h1>Fale Conosco</h1>
+        </header>
+        <div class="contact-layout">
+          <section class="contact-details">
+            <h2>Contato</h2>
+            <p>
+              <span class="label">Endereço</span><%= infoEmpresa.endereco %>
+            </p>
+            <p>
+              <span class="label">Telefone</span><%= infoEmpresa.telefone %>
+            </p>
+            <p><span class="label">Celular</span><%= infoEmpresa.celular %></p>
+          </section>
+          <form
+            class="contact-form"
+            id="contact-form"
+            action="/contato"
+            method="post"
+          >
+            <input type="text" name="nome" placeholder="Nome *" required />
+            <input type="email" name="email" placeholder="Email *" required />
+            <input type="text" name="assunto" placeholder="Assunto" />
+            <textarea
+              name="mensagem"
+              placeholder="Mensagem"
+              required
+            ></textarea>
+            <button class="btn-primary" type="submit">Enviar</button>
+            <p class="form-msg" id="form-msg" hidden>Mensagem enviada!</p>
+          </form>
+        </div>
+      </div>
+    </main>
+    <%- include('../partials/floating-menu') %><%- include('../partials/footer')
+    %>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
