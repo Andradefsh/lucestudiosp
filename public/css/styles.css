@@ -20,57 +20,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Header alinhado ao padrão do site oficial */
-header#site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 50px;
-    border-bottom: 1px solid var(--border-color);
-    z-index: 1000;
-}
-
-.logo h1 {
-    font-size: 1.15rem;
-    letter-spacing: 5px;
-    color: var(--primary-color);
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-.logo span {
-    font-size: 0.6rem;
-    letter-spacing: 3px;
-    color: #999999;
-    text-transform: uppercase;
-}
-
-.desktop-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.desktop-nav a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: 0.75rem;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-.desktop-nav a:hover,
-.desktop-nav a.active {
-    color: var(--accent-color);
-}
-
 main {
     margin-top: 110px;
 }
