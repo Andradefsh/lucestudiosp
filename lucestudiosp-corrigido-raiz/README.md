@@ -1,22 +1,29 @@
-# Luce Studio — réplica do site
+# Luce Studio
 
-Projeto Node.js + Express + EJS reconstruído a partir do material fornecido do site Luce Studio.
+Site institucional da **Luce Studio**, desenvolvido para apresentar a empresa, seus serviços e projetos através de uma experiência moderna, responsiva e personalizada.
 
-## Executar
+## 🛠️ Tecnologias
+
+* Node.js
+* Express
+* EJS
+* HTML5
+* CSS3
+* JavaScript
+
+## 🚀 Executando o projeto
 
 ```bash
 npm install
 npm start
 ```
 
-Depois acesse `http://localhost:3000`.
+O projeto será executado localmente na porta configurada pela aplicação.
 
-Rotas principais:
-- `/`
-- `/empresa`
-- `/portifolio`
-- `/produtos`
-- `/midia`
-- `/faleconosco`
+## 📌 Status
 
-A rota `/contato` redireciona para `/faleconosco`.
+Em desenvolvimento.
+
+---
+
+**Luce Studio** — Site institucional.

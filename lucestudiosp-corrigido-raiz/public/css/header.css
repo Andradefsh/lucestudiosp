@@ -1,0 +1,276 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--secondary-color);
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+  font-family: var(--font-primary);
+}
+
+header,
+header * {
+  font-family: var(--font-primary);
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 32px;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+}
+.logo:hover{
+    transform: scale(1.05);
+}
+
+.desktop-nav {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+.desktop-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  list-style: none;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  color: var(--text-color-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a:focus-visible {
+  color: var(--tertiary-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.desktop-nav a:focus-visible,
+.social-links a:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+.social-links img {
+  width: 14px;
+  height: 14px;
+  filter: brightness(0) invert(1);
+  opacity: 1;
+}
+
+.lang-select-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.04);
+  min-width: 110px;
+  width: 110px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+.lang-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border: none;
+  background: transparent;
+  color: var(--text-color-primary);
+  font: inherit;
+}
+
+.lang-select-wrap:focus-within {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+.flag {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.lang-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.lang-caret {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.lang-select {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background: transparent;
+  color: transparent;
+}
+
+.lang-select option {
+  background: #111827;
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    padding: 14px 18px;
+    gap: 12px;
+  }
+
+  .desktop-nav ul {
+    gap: 12px;
+  }
+
+  .desktop-nav a {
+    font-size: 0.72rem;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .social-links {
+    gap: 6px;
+  }
+
+  .lang-select-wrap {
+    min-width: 90px;
+    width: 90px;
+    height: 34px;
+  }
+
+  .lang-label {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 14px 18px;
+    gap: 12px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .logo-wrap {
+    min-width: auto;
+  }
+
+  .logo img {
+    width: 110px;
+    height: auto;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .social-links {
+    gap: 6px;
+  }
+
+  .social-links a {
+    width: 24px;
+    height: 24px;
+  }
+
+  .lang-select-wrap {
+    min-width: 88px;
+    width: 88px;
+    height: 34px;
+  }
+
+  .lang-label {
+    font-size: 0.65rem;
+  }
+}

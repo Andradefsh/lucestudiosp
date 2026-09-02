@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Na Mídia | Luce Studio</title>
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-<%- include('../partials/header.ejs') %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Na Mídia | Luce Studio</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <%- include('../partials/header.ejs') %>
 
-<main class="content-page">
-  <div class="container">
-    <header class="page-head">
-      <span class="eyebrow">Luce Studio</span>
-      <h1>Na Mídia</h1>
-      <p>Conteúdos, cursos, palestras, matérias e entrevistas relacionados à iluminação e ao design.</p>
-    </header>
-    <div class="media-grid">
-      <article class="media-card"><span>São Paulo 2017</span><h3>Lighting Design</h3></article>
-      <article class="media-card"><span>Cursos e palestras</span><h3>A Luz Sob Controle</h3></article>
-      <article class="media-card"><span>Matérias e entrevistas</span><h3>Luce Studio na mídia</h3></article>
-    </div>
-  </div>
-</main>
-<%- include('../partials/floating-menu') %><%- include('../partials/footer') %>
-<script src="/js/translation.js"></script>
-</body></html>
+    <main class="content-page">
+      <div class="container">
+        <header class="page-head">
+          <span class="eyebrow">Luce Studio</span>
+          <h1>Na Mídia</h1>
+          <p>
+            Conteúdos, cursos, palestras, matérias e entrevistas relacionados à
+            iluminação e ao design.
+          </p>
+        </header>
+        <div class="media-grid">
+          <article class="media-card">
+            <span>São Paulo 2017</span>
+            <h3>Lighting Design</h3>
+          </article>
+          <article class="media-card">
+            <span>Cursos e palestras</span>
+            <h3>A Luz Sob Controle</h3>
+          </article>
+          <article class="media-card">
+            <span>Matérias e entrevistas</span>
+            <h3>Luce Studio na mídia</h3>
+          </article>
+        </div>
+      </div>
+    </main>
+    <%- include('../partials/floating-menu') %><%- include('../partials/footer')
+    %>
+  </body>
+</html>

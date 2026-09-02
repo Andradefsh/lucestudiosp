@@ -1,43 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Empresa | Luce Studio</title>
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-<%- include('../partials/header.ejs') %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Empresa | Luce Studio</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <%- include('../partials/header.ejs') %>
 
-<main class="content-page">
-  <div class="container">
-    <header class="page-head">
-      <span class="eyebrow">Luce Studio</span>
-      <h1>A Empresa</h1>
-      <p>Soluções inovadoras, criativas e sustentáveis em iluminação, do conceito à implementação.</p>
-    </header>
-    <div class="about-grid">
-      <article class="about-text">
-        <h2>Luce Studio</h2>
-        <p>A <strong>Luce Studio</strong>, antiga JRLUZ, é uma empresa especializada em soluções de iluminação, no mercado desde 2008. Sua diretora e proprietária, Arquiteta e Lighting Designer, atua na indústria de iluminação desde 1997.</p>
-        <p>Nossa missão é trazer soluções inovadoras, criativas e sustentáveis para o mercado. Promovemos serviços de alta performance e qualidade, do conceito até a implementação completa, com soluções sob medida, de acordo com a necessidade e budget do cliente.</p>
-        <blockquote class="quote">“Cada vez mais, ao que me parece, a luz é o grande embelezador de um edifício.”<br><small>Frank Lloyd Wright, arquiteto</small></blockquote>
-        <h2>Juliana Ramacciotti</h2>
-        <p>Juliana Ramacciotti obteve sua graduação em Arquitetura e Urbanismo pela FAAP-SP em 1998. Sua carreira foi iniciada na indústria de iluminação em 1997, no Departamento de Projetos de Iluminação da Philips do Brasil Ltda., onde trabalhou por mais de sete anos.</p>
-        <p>De 2001 a 2008, atuou como Country Manager da Lutron BZ do Brasil Ltda., desenvolvendo o mercado de controles de iluminação e automação no país e ampliando sua experiência internacional.</p>
-        <p>Em 2008, fundou a Luce Studio, participando de projetos relevantes no varejo, em instituições, residências e ambientes corporativos. A empresa já executou mais de 100 mil m² de projetos.</p>
-        <p>Como professora, foi titular da matéria “A Luz Sob Controle” na Pós-Graduação em Iluminação e Design de Interiores do IPOG por mais de três anos e foi consultora de iluminação do i9 – Grupo de Inovação do CGP (Central Globo de Produções) por dois anos.</p>
-      </article>
-      <aside>
-        <img class="profile-photo" src="/images/perfil-equipe.jpg" alt="Luce Studio">
-        <div class="award">
-          <img src="/images/selo-casacor-2018.png" alt="CASACOR São Paulo 2018">
-          <span>Fornecedor CASACOR São Paulo 2018</span>
+    <main class="content-page">
+      <div class="container">
+        <header class="page-head">
+          <span class="eyebrow">Luce Studio</span>
+          <h1>A Empresa</h1>
+          <p>
+            Soluções inovadoras, criativas e sustentáveis em iluminação, do
+            conceito à implementação.
+          </p>
+        </header>
+        <div class="about-grid">
+          <article class="about-text">
+            <h2>Luce Studio</h2>
+            <p>
+              A <strong>Luce Studio</strong>, antiga JRLUZ, é uma empresa
+              especializada em soluções de iluminação, no mercado desde 2008.
+              Sua diretora e proprietária, Arquiteta e Lighting Designer, atua
+              na indústria de iluminação desde 1997.
+            </p>
+            <p>
+              Nossa missão é trazer soluções inovadoras, criativas e
+              sustentáveis para o mercado. Promovemos serviços de alta
+              performance e qualidade, do conceito até a implementação completa,
+              com soluções sob medida, de acordo com a necessidade e budget do
+              cliente.
+            </p>
+            <blockquote class="quote">
+              “Cada vez mais, ao que me parece, a luz é o grande embelezador de
+              um edifício.”<br /><small>Frank Lloyd Wright, arquiteto</small>
+            </blockquote>
+            <h2>Juliana Ramacciotti</h2>
+            <p>
+              Juliana Ramacciotti obteve sua graduação em Arquitetura e
+              Urbanismo pela FAAP-SP em 1998. Sua carreira foi iniciada na
+              indústria de iluminação em 1997, no Departamento de Projetos de
+              Iluminação da Philips do Brasil Ltda., onde trabalhou por mais de
+              sete anos.
+            </p>
+            <p>
+              De 2001 a 2008, atuou como Country Manager da Lutron BZ do Brasil
+              Ltda., desenvolvendo o mercado de controles de iluminação e
+              automação no país e ampliando sua experiência internacional.
+            </p>
+            <p>
+              Em 2008, fundou a Luce Studio, participando de projetos relevantes
+              no varejo, em instituições, residências e ambientes corporativos.
+              A empresa já executou mais de 100 mil m² de projetos.
+            </p>
+            <p>
+              Como professora, foi titular da matéria “A Luz Sob Controle” na
+              Pós-Graduação em Iluminação e Design de Interiores do IPOG por
+              mais de três anos e foi consultora de iluminação do i9 – Grupo de
+              Inovação do CGP (Central Globo de Produções) por dois anos.
+            </p>
+          </article>
+          <aside>
+            <img
+              class="profile-photo"
+              src="/images/perfil-equipe.jpg"
+              alt="Luce Studio"
+            />
+            <div class="award">
+              <img
+                src="/images/selo-casacor-2018.png"
+                alt="CASACOR São Paulo 2018"
+              />
+              <span>Fornecedor CASACOR São Paulo 2018</span>
+            </div>
+          </aside>
         </div>
-      </aside>
-    </div>
-  </div>
-</main>
-<%- include('../partials/floating-menu') %><%- include('../partials/footer') %>
-<script src="/js/translation.js"></script>
-</body></html>
+      </div>
+    </main>
+    <%- include('../partials/floating-menu') %><%- include('../partials/footer')
+    %>
+  </body>
+</html>
