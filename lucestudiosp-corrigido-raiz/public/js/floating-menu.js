@@ -8,6 +8,7 @@
     floatingMenu.classList.toggle("open", isOpen);
     menuToggle.setAttribute("aria-expanded", String(isOpen));
     menuPanel.setAttribute("aria-hidden", String(!isOpen));
+    menuPanel.inert = !isOpen;
   };
 
   const menuPanel = document.getElementById("menuPanel");

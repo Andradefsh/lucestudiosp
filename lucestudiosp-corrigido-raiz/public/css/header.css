@@ -1,5 +1,5 @@
-header {
-  position: fixed;
+#header {
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -9,8 +9,8 @@ header {
   font-family: var(--font-primary);
 }
 
-header,
-header * {
+#header,
+#header * {
   font-family: var(--font-primary);
 }
 
@@ -28,6 +28,7 @@ header * {
 .logo {
   display: flex;
   align-items: center;
+  transition: transform 0.2s ease;
 }
 
 .logo img {
@@ -36,8 +37,9 @@ header * {
   height: auto;
   object-fit: contain;
 }
-.logo:hover{
-    transform: scale(1.05);
+
+.logo:hover {
+  transform: scale(1.03);
 }
 
 .desktop-nav {
