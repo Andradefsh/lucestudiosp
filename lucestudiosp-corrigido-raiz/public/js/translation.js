@@ -154,6 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const langSelect = document.querySelector("[data-lang-select]");
   if (!langSelect) return;
 
+  const storedLanguage = window.localStorage.getItem("luce-language");
+  if (storedLanguage && translations[storedLanguage]) {
+    langSelect.value = storedLanguage;
+  }
+
   const syncLanguage = (language) => {
     applyHeaderLanguage(language);
     applyMobileLanguage(language);
@@ -163,6 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
   syncLanguage(langSelect.value);
 
   langSelect.addEventListener("change", (event) => {
+    window.localStorage.setItem("luce-language", event.target.value);
     syncLanguage(event.target.value);
   });
 });

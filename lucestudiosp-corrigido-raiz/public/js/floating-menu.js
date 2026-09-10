@@ -19,6 +19,10 @@
     setMenuState(isOpen);
   });
 
+  menuPanel.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuState(false));
+  });
+
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && floatingMenu.classList.contains("open")) {
       setMenuState(false);
