@@ -2,7 +2,12 @@
   "name": "lucestudiosp-workspace",
   "private": true,
   "scripts": {
-    "start": "npm --prefix lucestudiosp-corrigido-raiz start",
-    "install:app": "npm --prefix lucestudiosp-corrigido-raiz install"
+    "start": "node lucestudiosp-corrigido-raiz/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "nodemailer": "^9.1.1"
   }
 }
