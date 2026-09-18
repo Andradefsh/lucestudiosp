@@ -20,6 +20,16 @@ npm start
 
 O projeto será executado localmente na porta configurada pela aplicação.
 
+## Deploy no Render
+
+Na criação do Web Service, use o repositório na raiz e configure:
+
+- Build Command: `npm install`
+- Start Command: `npm start`
+
+Cadastre no painel do Render as variáveis listadas em `.env.example`. Nunca
+envie o arquivo `.env` nem coloque senhas SMTP no repositório.
+
 ## 📌 Status
 
 Em desenvolvimento.
